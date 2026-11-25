@@ -1,0 +1,118 @@
+{
+    "generated":  "2026-11-20 22:36",
+    "windowDays":  2,
+    "query":  "PHP",
+    "total":  5,
+    "items":  [
+                  {
+                      "title":  "Múltiples vulnerabilidades en PHP",
+                      "url":  "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-php-0",
+                      "date":  "2026-11-20",
+                      "key":  "202611200000",
+                      "summary":  "Publicado el 20/11/2026 PHP ha publicado correcciones para 18 vulnerabilidades. De las 17 propias de PHP, 7 son de severidad... Leer más Importancia 5 - Crítica Etiquetas Actualización Aplicación Código arbitrario Denegación de servicio - DoS - DDoS + Disponibilidad PHP RCE Vulnerabilidad - \u003cdiv class=\"envoltorio-blog envoltorio-vulnerabilidades col-12 col-sm-1",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Critica",
+                      "rank":  4,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "PHP"
+                                 ],
+                      "sources":  [
+                                      "INCIBE-CERT (alertas)"
+                                  ]
+                  },
+                  {
+                      "title":  "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
+                      "url":  "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
+                      "date":  "2026-11-19 16:18",
+                      "key":  "202611191618",
+                      "summary":  "The PHP Foundation has released security updates to address multiple critical security flaws that could be exploited to achieve remote code execution on affected deployments, including CVE-2026-115560. The release of the patch follows an advance notice in which the project maintainers alerted users to multiple critical vulnerabilities affecting all supported PHP versions under specific",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Critica",
+                      "rank":  4,
+                      "cvss":  null,
+                      "cves":  [
+                                   "CVE-2026-115560"
+                               ],
+                      "topics":  [
+                                     "PHP"
+                                 ],
+                      "sources":  [
+                                      "The Hacker News (vulnerabilidades)"
+                                  ]
+                  },
+                  {
+                      "title":  "PHP Warns of Critical Security Flaws Affecting All Supported Versions, Fixes Coming November 19",
+                      "url":  "https://thehackernews.com/2026/11/php-warns-of-critical-security-flaws.html",
+                      "date":  "2026-11-19 05:33",
+                      "key":  "202611190533",
+                      "summary":  "The maintainers of the PHP programming language on Wednesday issued an advisory announcing an upcoming security release that addresses critical flaws. The release is scheduled for November 19, 2026, between 2 and 2:30 p.m. UTC. \"These releases are part of PHP\u0027s regular four-week release cycle and will address security vulnerabilities affecting all supported PHP versions,\" the maintainers said.",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Critica",
+                      "rank":  4,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "PHP"
+                                 ],
+                      "sources":  [
+                                      "The Hacker News (vulnerabilidades)"
+                                  ]
+                  },
+                  {
+                      "title":  "Fallas críticas de PHP y phpAfterShell ya tienen parche hoy",
+                      "url":  "https://tecnologiageek.com/fallas-criticas-de-php-phpaftershell/",
+                      "date":  "2026-11-19",
+                      "key":  "202611190000",
+                      "summary":  "noviembre 19, 2026 por Henry Ramirez Fallas críticas de PHP ya tienen parche en 8.2.36, 8.3.37, 8.4.28 y 8.5.13, con phpAfterShell y contrabando FastCGI. Leer más Ciberseguridad Industrial \u0026 Consumidor Zero-day",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Critica",
+                      "rank":  4,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "PHP"
+                                 ],
+                      "sources":  [
+                                      "TecnologiaGeek (ciberseguridad)"
+                                  ]
+                  },
+                  {
+                      "title":  "phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution",
+                      "url":  "https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html",
+                      "date":  "2026-11-19 17:59",
+                      "key":  "202611191759",
+                      "summary":  "PHP\u0027s default file-based session storage can be made to return objects an attacker chose, by cutting off a session write at the right moment. When combined with a second weakness, such as a suitable gadget chain in the app, those objects can allow the attacker to run code on the server. Today\u0027s PHP releases fix the flaw, called phpAfterShell. The flaw is tracked as CVE-2026-126714 and rated",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Grave",
+                      "rank":  3,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "PHP"
+                                 ],
+                      "sources":  [
+                                      "The Hacker News (vulnerabilidades)"
+                                  ]
+                  }
+              ]
+}

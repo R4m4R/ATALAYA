@@ -1,0 +1,10 @@
+# Fuentes de busqueda: una por linea  ->  Nombre | URL
+# Puedes anadir mas lineas; el panel las usa en la siguiente carga (o al pulsar Actualizar).
+INCIBE-CERT (alertas) | https://www.incibe.es/incibe-cert/alerta-temprana/avisos
+TecnologiaGeek (ciberseguridad) | https://tecnologiageek.com/category/ciberseguridad-industrial-consumidor/
+The Hacker News (vulnerabilidades) | https://feeds.feedburner.com/TheHackersNews
+Blog elhacker.net | https://blog.elhacker.net/
+opensecurity | https://www.opensecurity.es/category/seguridad/
+alertas-ciberseguridad.com | https://alertas-ciberseguridad.com/#alertas
+ciberseguridad.euskadi | https://ciberseguridad.euskadi.eus/ultima-hora/
+bleepingcomputer.com | https://www.bleepingcomputer.com/news/security/

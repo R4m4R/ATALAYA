@@ -1,0 +1,498 @@
+{
+    "generated":  "2026-11-25 14:14",
+    "windowDays":  3,
+    "severities":  [
+                       "Critica",
+                       "Grave",
+                       "Media",
+                       "Baja",
+                       "Info"
+                   ],
+    "sources":  [
+                    {
+                        "name":  "opensecurity",
+                        "url":  "https://www.opensecurity.es/category/seguridad/",
+                        "ok":  true,
+                        "total":  16,
+                        "error":  null
+                    },
+                    {
+                        "name":  "alertas-ciberseguridad.com",
+                        "url":  "https://alertas-ciberseguridad.com/#alertas",
+                        "ok":  true,
+                        "total":  7,
+                        "error":  null
+                    },
+                    {
+                        "name":  "The Hacker News (vulnerabilidades)",
+                        "url":  "https://feeds.feedburner.com/TheHackersNews",
+                        "ok":  true,
+                        "total":  50,
+                        "error":  null
+                    },
+                    {
+                        "name":  "bleepingcomputer.com",
+                        "url":  "https://www.bleepingcomputer.com/news/security/",
+                        "ok":  true,
+                        "total":  42,
+                        "error":  null
+                    },
+                    {
+                        "name":  "ciberseguridad.euskadi",
+                        "url":  "https://ciberseguridad.euskadi.eus/ultima-hora/",
+                        "ok":  true,
+                        "total":  24,
+                        "error":  null
+                    },
+                    {
+                        "name":  "TecnologiaGeek (ciberseguridad)",
+                        "url":  "https://tecnologiageek.com/category/ciberseguridad-industrial-consumidor/",
+                        "ok":  true,
+                        "total":  43,
+                        "error":  null
+                    },
+                    {
+                        "name":  "INCIBE-CERT (alertas)",
+                        "url":  "https://www.incibe.es/incibe-cert/alerta-temprana/avisos",
+                        "ok":  true,
+                        "total":  82,
+                        "error":  null
+                    },
+                    {
+                        "name":  "Blog elhacker.net",
+                        "url":  "https://blog.elhacker.net/",
+                        "ok":  true,
+                        "total":  45,
+                        "error":  null
+                    }
+                ],
+    "topics":  [
+                   "PHP",
+                   "Linux",
+                   "Apache",
+                   "Nginx",
+                   "Java",
+                   "Exchange",
+                   "Outlook",
+                   "Zimbra",
+                   "Bind",
+                   "Samba",
+                   "Fortinet",
+                   "Cisco",
+                   "F5",
+                   "VMWARE",
+                   "Oracle",
+                   ".NET",
+                   "Synology"
+               ],
+    "total":  18,
+    "items":  [
+                  {
+                      "title":  "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
+                      "url":  "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+                      "date":  "2026-11-24 14:28",
+                      "key":  "202611241428",
+                      "summary":  "Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one critical bug that could be abused to bypass authentication. The critical vulnerability, tracked as CVE-2026-123903, is rated 9.8 out of 10.0 on the CVSS scoring system. It resides in the VMware Directory Service (\"vmdir\"). \"A malicious actor with",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Critica",
+                      "rank":  4,
+                      "cvss":  null,
+                      "cves":  [
+                                   "CVE-2026-123903"
+                               ],
+                      "topics":  [
+                                     "VMWARE"
+                                 ],
+                      "sources":  [
+                                      "The Hacker News (vulnerabilidades)"
+                                  ]
+                  },
+                  {
+                      "title":  "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
+                      "url":  "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
+                      "date":  "2026-11-23 16:10",
+                      "key":  "202611231610",
+                      "summary":  "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That\u0027s partly why they work. Attackers don\u0027t always need to break down a door. Sometimes they just use one that\u0027s already open. This week\u0027s stories show how quickly a small opening can turn into a much bigger mess. One breach helps attackers reach another target. Tools people rely",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Critica",
+                      "rank":  4,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Nginx",
+                                     "Java",
+                                     "VMWARE"
+                                 ],
+                      "sources":  [
+                                      "The Hacker News (vulnerabilidades)"
+                                  ]
+                  },
+                  {
+                      "title":  "Synology corrige una vulnerabilidad crítica de ejecución remota de código en DiskStation Manager (DSM)",
+                      "url":  "https://ciberseguridad.euskadi.eus/noticia/2026/synology-corrige-vulnerabilidad-critica-ejecucion-remota-codigo-diskstation-manager-dsm/webcyb00-contcibglos/es/",
+                      "date":  "2026-11-23",
+                      "key":  "202611230000",
+                      "summary":  "Alerta Importancia: Crítica Se ha detectado una vulnerabilidad en la API de OAuth de Synology DiskStation Manager (DSM), con gravedad crítica. 23 Noviembre, 2026 Uso de credenciales predeterminadas en controladores de refrigeración de Danfoss Aviso SCI Importancia: Crítica Danfoss ha publicado 1 vulnerabilidad de severidad crítica en sus controladores de refrigeración. Un atacante con acceso a la interfaz de gestión podría utilizar una contraseña predeterminada, débil o conocida para acceder sin autorización y modificar parámetros como la temperatura o los umbrales de alarma. Estos cambios podrían comprometer la conservación de los productos refrigerados. 23 Noviembre, 2026 Detectadas múltiples vulnerabilidades críticas de ejecución remota de código en PHP, incluida phpAfterShell (CVE-2026-126714) Alerta Importancia: Crítica La Fundación PHP ha corregido vulnerabilidades en el producto PHP. 20 Noviembre, 2026 Splunk corrige múltiples vulnerabilidades",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Critica",
+                      "rank":  4,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Synology"
+                                 ],
+                      "sources":  [
+                                      "ciberseguridad.euskadi"
+                                  ]
+                  },
+                  {
+                      "title":  "VMware soluciona vulnerabilidad zero-day en vCenter explotada desde septiembre",
+                      "url":  "https://blog.elhacker.net/2026/11/vmware-soluciona-vulnerabilidad-zero.html",
+                      "date":  "2026-11-22",
+                      "key":  "202611220000",
+                      "summary":  "domingo, 22 de noviembre de 2026 | Publicado por el-brujo Broadcom lanzó actualizaciones urgentes para corregir una vulnerabilidad crítica (CVE-2026-123890) en VMware vCenter Server que permite el acceso administrativo no autorizado. Se ha reportado que un grupo de hackers vinculados a China, conocido como \"Armory Castle\", explotó este fallo en ataques de día cero para controlar máquinas virtuales y robar datos sensibles. Se insta a todas las organizaciones afectadas a instalar los parches de seguridad inmediatamente. var obj0=document.getElementById(\"aim13506625608888882665\"); var obj1=document.getElementById(\"aim23506625608888882665\"); var s=obj1.innerHTML; var r=s.search(/\\x3C!-- adsense --\\x3E/igm); if(r\u003e0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);} Leer más » Etiquetas: broadcom , ciberataque , hacker ,",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Critica",
+                      "rank":  4,
+                      "cvss":  null,
+                      "cves":  [
+                                   "CVE-2026-123890"
+                               ],
+                      "topics":  [
+                                     "VMWARE"
+                                 ],
+                      "sources":  [
+                                      "Blog elhacker.net"
+                                  ]
+                  },
+                  {
+                      "title":  "Google Researcher Shows How a Single Bit Change in .NET Files Bypassed Windows Code Integrity",
+                      "url":  "https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html",
+                      "date":  "2026-11-24 13:02",
+                      "key":  "202611241302",
+                      "summary":  "A quirk in how the .NET Framework loads a program file let a local attacker run untrusted code past two separate protections on Windows built to block it, Google Project Zero researcher James Forshaw showed in a write-up published yesterday. The same loading behavior bypassed Oracle VirtualBox\u0027s process hardening on Windows hosts, tracked as CVE-2026-87268, and Windows code integrity, tracked",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Grave",
+                      "rank":  3,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     ".NET"
+                                 ],
+                      "sources":  [
+                                      "The Hacker News (vulnerabilidades)"
+                                  ]
+                  },
+                  {
+                      "title":  "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
+                      "url":  "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
+                      "date":  "2026-11-24 07:02",
+                      "key":  "202611240702",
+                      "summary":  "OpenAI and Cisco have teamed up to launch Shirudo (meaning \"shield\" in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime. \"It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches,\" OpenAI said in a post on X. The AI upstart called the initiative a",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Grave",
+                      "rank":  3,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Linux",
+                                     "Cisco"
+                                 ],
+                      "sources":  [
+                                      "The Hacker News (vulnerabilidades)"
+                                  ]
+                  },
+                  {
+                      "title":  "Vulnerabilidades de VMware en ESX y vCenter llegan a 9,8",
+                      "url":  "https://tecnologiageek.com/vulnerabilidades-de-vmware-esx-y-vcenter/",
+                      "date":  "2026-11-24",
+                      "key":  "202611240000",
+                      "summary":  "noviembre 24, 2026 por Henry Ramirez Vulnerabilidades de VMware: Broadcom corrige 23 fallos en ESX y vCenter, tres con nota 9,8 y ESX 9.0 queda sin parche. Leer más Ciberseguridad",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Grave",
+                      "rank":  3,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "VMWARE"
+                                 ],
+                      "sources":  [
+                                      "TecnologiaGeek (ciberseguridad)"
+                                  ]
+                  },
+                  {
+                      "title":  "OpenAI y Cisco lanzan Shirudo para bloquear exploits en servidores Linux",
+                      "url":  "https://blog.elhacker.net/2026/11/openai-y-cisco-lanzan-shirudo-para.html",
+                      "date":  "2026-11-24",
+                      "key":  "202611240000",
+                      "summary":  "martes, 24 de noviembre de 2026 | Publicado por el-brujo OpenAI y Cisco lanzaron el 23 de noviembre de 2026 Shirudo , una herramienta de seguridad de código abierto creada para bloquear exploits específicos en servidores Linux activos. Esta solución permite proteger los sistemas mientras los equipos prueban e implementan parches permanentes. En una prueba controlada, un escudo generado por Codex de OpenAI logró detener un intento de exploit Java4Shell contra Elasticsearch sin necesidad de reiniciar el servicio. var obj0=document.getElementById(\"aim16946136315800591865\"); var obj1=document.getElementById(\"aim26946136315800591865\"); var s=obj1.innerHTML; var r=s.search(/\\x3C!-- adsense --\\x3E/igm); if(r\u003e0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);} Leer más » Etiquetas: ciberseguridad , exploit , inteligencia-artificial , linux , parche , seguridad",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Grave",
+                      "rank":  3,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Linux",
+                                     "Cisco"
+                                 ],
+                      "sources":  [
+                                      "Blog elhacker.net"
+                                  ]
+                  },
+                  {
+                      "title":  "Múltiples vulnerabilidades en productos VMware Tanzu de Broadcom",
+                      "url":  "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-vmware-tanzu-de-broadcom",
+                      "date":  "2026-11-24",
+                      "key":  "202611240000",
+                      "summary":  "Publicado el 24/11/2026 Broadcom ha publicado 2 boletines que reúnen 19 vulnerabilidades en componentes PHP y Brotli incorporados... Leer más Importancia 5 - Crítica Etiquetas Actualización Cloud Código arbitrario Confidencialidad + Denegación de servicio - DoS - DDoS Desbordamiento Divulgación de información Escalada de privilegios \u003cli class=\"tag_clouds_term term_width_6\" style=\u0027display: non",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Grave",
+                      "rank":  3,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "VMWARE"
+                                 ],
+                      "sources":  [
+                                      "INCIBE-CERT (alertas)"
+                                  ]
+                  },
+                  {
+                      "title":  "Cisco y OpenAI proponen los plugins de kernel eBPF para frenar el caos de los parches",
+                      "url":  "https://blog.elhacker.net/2026/11/cisco-y-openai-proponen-los-plugins-de.html",
+                      "date":  "2026-11-24",
+                      "key":  "202611240000",
+                      "summary":  "martes, 24 de noviembre de 2026 | Publicado por el-brujo Cisco y OpenAI lanzaron Shirudo, una herramienta de código abierto basada en eBPF para implementar controles compensatorios en Linux. El sistema utiliza IA para crear escudos de seguridad rápidos que mitigan vulnerabilidades sin necesidad de aplicar parches inmediatos ni reiniciar sistemas. Esta iniciativa busca ayudar a las organizaciones a manejar el masivo volumen de fallos de software actuales. var obj0=document.getElementById(\"aim1323874202272397760\"); var obj1=document.getElementById(\"aim2323874202272397760\"); var s=obj1.innerHTML; var r=s.search(/\\x3C!-- adsense --\\x3E/igm); if(r\u003e0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);} Leer más » Etiquetas: cisco , código , ebpf , linux , openai , seguridad , \u003ca href=\u0027https://blog.elhacker.net/search/label/softwar",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Grave",
+                      "rank":  3,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Cisco"
+                                 ],
+                      "sources":  [
+                                      "Blog elhacker.net"
+                                  ]
+                  },
+                  {
+                      "title":  "Múltiples vulnerabilidades en el núcleo de Linux",
+                      "url":  "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-el-nucleo-de-linux",
+                      "date":  "2026-11-23",
+                      "key":  "202611230000",
+                      "summary":  "Publicado el 23/11/2026 Xin Liu ha informado sobre un desbordamiento en el cliente SMB. El proyecto Linux ha corregido este fallo... Leer más Importancia 5 - Crítica Etiquetas Actualización Denegación de servicio - DoS - DDoS Disponibilidad Intercambio de archivos + Linux Sistema operativo Vulnerabilidad - \u003carticle data-history-node-id=\"702403\" class=",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Grave",
+                      "rank":  3,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Linux"
+                                 ],
+                      "sources":  [
+                                      "INCIBE-CERT (alertas)"
+                                  ]
+                  },
+                  {
+                      "title":  "Múltiples vulnerabilidades en productos de Synology",
+                      "url":  "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-synology-0",
+                      "date":  "2026-11-23",
+                      "key":  "202611230000",
+                      "summary":  "Publicado el 23/11/2026 Nguyễn Bá Nam Dũng y Hà Thế Long, de Viettel Cyber Security Research Lab, y Warisse Valentin han... Leer más Importancia 5 - Crítica Etiquetas Acceso no autorizado Actualización Autenticación Código arbitrario + Denegación de servicio - DoS - DDoS Desbordamiento Disponibilidad Divulgación de información \u003ca href=\"/incibe-c",
+                      "alts":  [
+                                   {
+                                       "title":  "Múltiples vulnerabilidades en productos de Cisco",
+                                       "url":  "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/multiples-vulnerabilidades-en-productos-de-cisco-20",
+                                       "source":  "INCIBE-CERT (alertas)"
+                                   }
+                               ],
+                      "severity":  "Grave",
+                      "rank":  3,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Synology",
+                                     "Cisco"
+                                 ],
+                      "sources":  [
+                                      "INCIBE-CERT (alertas)"
+                                  ]
+                  },
+                  {
+                      "title":  "Microsoft declara alerta roja tras caída histórica de Outlook, Teams y Copilot",
+                      "url":  "https://blog.elhacker.net/2026/11/microsoft-declara-alerta-roja-tras.html",
+                      "date":  "2026-11-25",
+                      "key":  "202611250000",
+                      "summary":  "miércoles, 25 de noviembre de 2026 | Publicado por el-brujo Microsoft ha declarado un \"Código Rojo\" interno tras una caída de casi 24 horas en Microsoft 365 los días 12 y 13 de noviembre de 2026, afectando a servicios como Outlook, Teams, Copilot y Exchange Online . Según Reuters, la compañía ha priorizado la prevención de fallos masivos y la aceleración de la recuperación, mientras que el CEO, Satya Nadella , ha pedido disculpas públicamente. var obj0=document.getElementById(\"aim15506785365809402603\"); var obj1=document.getElementById(\"aim25506785365809402603\"); var s=obj1.innerHTML; var r=s.search(/\\x3C!-- adsense --\\x3E/igm); if(r\u003e0) {obj0.innerHTML=s.substr(0,r);obj1.innerHTML=s.substr(r+16);} Leer más » Etiquetas: caída , informática , interrupción ,",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Info",
+                      "rank":  0,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Outlook"
+                                 ],
+                      "sources":  [
+                                      "Blog elhacker.net"
+                                  ]
+                  },
+                  {
+                      "title":  "Condición de carrera en la gestión de sesiones PHP en productos de Cisco",
+                      "url":  "https://www.incibe.es/incibe-cert/alerta-temprana/avisos/condicion-de-carrera-en-la-gestion-de-sesiones-php-en-productos-de-cisco",
+                      "date":  "2026-11-24",
+                      "key":  "202611240000",
+                      "summary":  "Publicado el 24/11/2026 Leo Lin y Asahi han informado sobre 1 vulnerabilidad de severidad crítica en la gestión de sesiones de... Leer más Importancia 5 - Crítica Etiquetas Actualización Cisco Código arbitrario Comunicaciones y redes + PHP RCE Vulnerabilidad Wireless - \u003cdiv class=\"envoltorio-blog envoltorio-vulnerabilidades col",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Info",
+                      "rank":  0,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "PHP",
+                                     "Cisco"
+                                 ],
+                      "sources":  [
+                                      "INCIBE-CERT (alertas)"
+                                  ]
+                  },
+                  {
+                      "title":  "Shirudo de OpenAI y Cisco protege Linux sin reiniciar",
+                      "url":  "https://tecnologiageek.com/shirudo-openai-cisco-linux/",
+                      "date":  "2026-11-24",
+                      "key":  "202611240000",
+                      "summary":  "noviembre 24, 2026 por Henry Ramirez Shirudo, de OpenAI y Cisco, bloquea ataques en Linux con escudos eBPF firmados mientras llega el parche. Así funciona la defensa. Leer más Cibersegu",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Info",
+                      "rank":  0,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Linux",
+                                     "Cisco"
+                                 ],
+                      "sources":  [
+                                      "TecnologiaGeek (ciberseguridad)"
+                                  ]
+                  },
+                  {
+                      "title":  "Integridad de código de Windows cae ante un archivo .NET",
+                      "url":  "https://tecnologiageek.com/integridad-de-codigo-de-windows-archivo-net/",
+                      "date":  "2026-11-24",
+                      "key":  "202611240000",
+                      "summary":  "noviembre 24, 2026 por Henry Ramirez Un solo bit cambiado en un archivo .NET bastó para burlar la integridad de código de Windows y el blindaje de VirtualBox. Leer más \u003cdiv cla",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Info",
+                      "rank":  0,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     ".NET"
+                                 ],
+                      "sources":  [
+                                      "TecnologiaGeek (ciberseguridad)"
+                                  ]
+                  },
+                  {
+                      "title":  "PAN-OS suma dos fallos de NGINX con nota 9,2",
+                      "url":  "https://tecnologiageek.com/pan-os-fallos-de-nginx/",
+                      "date":  "2026-11-23",
+                      "key":  "202611230000",
+                      "summary":  "noviembre 23, 2026 por Henry Ramirez PAN-OS tiene dos fallos de NGINX con nota 9,2. Tres parches llegan hoy y apagar HTTP/2 corta la exposición. Leer más \u003ca class=",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Info",
+                      "rank":  0,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "Nginx"
+                                 ],
+                      "sources":  [
+                                      "TecnologiaGeek (ciberseguridad)"
+                                  ]
+                  },
+                  {
+                      "title":  "F5 BIG-IP recibe hotfixes de emergencia por seis fallos 9,8",
+                      "url":  "https://tecnologiageek.com/f5-big-ip-hotfixes-de-emergencia/",
+                      "date":  "2026-11-22",
+                      "key":  "202611220000",
+                      "summary":  "noviembre 22, 2026 por Henry Ramirez F5 BIG-IP tiene seis fallos críticos de 9,8 en iRules y APM. Solo hay hotfixes de emergencia y ninguna alternativa. Revisa tu equipo hoy. Leer más \u003cimg width=\"800\" height=\"450\" src=\"https://i0.wp.com/tecnologiageek.com/wp-content/uploads/2026/11/recuperar-cuenta-de-linkedin-correo-que-ya-no-existe-1600x900-1.webp?resize=800%2C450\u0026ssl=1\" class=\"attachment-geekmag-card size-geekmag-card wp-post-image\" alt=\"Manos de una mujer escribiendo en una computadora portátil sobre un escritorio\" loading=\"lazy\" sizes=\"auto, (min-width: 1232px) 387px, (min-width: 1024px) calc((100vw - 4.5rem) / 3), (min-width: 640px) calc((100vw - 3.25rem) / 2), calc(100vw - 2rem)\" decoding=\"async\" srcset=\"https://i0.wp.com/tecnologiageek.com/wp-content/uploads/2026/11/recuperar-cuenta-de-linkedin-correo-que-ya-no-existe-1600x900-1.webp?w=1600\u0026ssl=1 1600w,...",
+                      "alts":  [
+
+                               ],
+                      "severity":  "Info",
+                      "rank":  0,
+                      "cvss":  null,
+                      "cves":  [
+
+                               ],
+                      "topics":  [
+                                     "F5"
+                                 ],
+                      "sources":  [
+                                      "TecnologiaGeek (ciberseguridad)"
+                                  ]
+                  }
+              ]
+}

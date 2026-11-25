@@ -1,0 +1,44 @@
+# Configuracion del panel SOC (tambien editable desde la web, boton Ajustes)
+# severidades: Critica, Grave, Media, Baja, Info (separadas por coma)
+# dias: ventana temporal en dias (1-30)
+# noticias_intervalo_min: cada cuantos minutos se actualizan las noticias (1-1440, por defecto 180)
+severidades=Critica,Grave,Media,Baja,Info
+dias=3
+noticias_intervalo_min=60
+# tema visual: profesional o corporativo
+tema=profesional
+# monitor de salud de servicios (on/off)
+monitor_salud=on
+# intervalo de comprobacion de salud en segundos (30-3600)
+monitor_intervalo_seg=1800
+# umbrales del estado general de salud (%): verde si >= verde, ambar si >= ambar, rojo si es menor
+salud_umbral_verde=90
+salud_umbral_ambar=80
+# latencia: un servicio que responde OK pero tarda mas que esto (ms) pasa a LENTO (0 = desactivado)
+latencia_aviso_ms=2000
+# webhook (Teams/Slack): URL que recibe un aviso al caer o recuperarse un servicio (vacio = desactivado)
+webhook_url=
+# mantenimiento: ventanas sin avisos. Formato: [Lun,Mie ]HH:MM-HH:MM separadas por ; (ej. Sab 02:00-04:00;23:00-23:30)
+mantenimiento=
+# ancho de la web en % de la pantalla (50-100)
+ancho_pct=98
+# casillas de monitorizacion por fila (1-12)
+casillas_fila=8
+# caracteres del resumen de cada noticia en el popup (100-5000)
+resumen_caracteres=1000
+# tamano de letra de las tarjetas del monitor de salud (px, 9-16)
+tamano_monitor=12
+# horas que muestra la grafica principal del monitor (1-168, por defecto 24)
+horas_grafica_general=24
+# horas que muestra cada grafica pequeÃ±a de servicio (1-24, por defecto 2)
+horas_grafica_servicio=3
+# minutos que se muestra el aviso 'Detectada ... normalidad ...' bajo la grafica general (1-1440)
+minutos_aviso_incidencia=15
+# panel derecho por defecto: ultimas o temas
+panel_derecho=ultimas
+# numero de noticias en el TOP de Ultimas noticias (1-50)
+top_noticias=10
+# monitor de salud al abrir: max (maximizado) o min (minimizado)
+monitor_vista=min
+# tamano de letra de la web en px (11-20)
+tamano_letra=15

@@ -1,0 +1,10 @@
+# Monitor de salud de servicios (tipo Downdetector): una linea por servicio -> Nombre | URL
+# Estados: OK = respuesta 2xx/3xx. AVISO = 4xx (responde, pero puede bloquear la comprobacion automatica).
+# CAIDA = 5xx, timeout o sin respuesta.
+# Downdetector bloquea las peticiones automaticas (403), asi que se usan paginas oficiales de estado y
+# rastreadores que si responden. Son una pista de disponibilidad, no un reporte de usuarios.
+Outlook | https://status.cloud.microsoft/
+Teams | https://teams.microsoft.com/
+Gmail | https://mail.google.com/
+WhatsApp | https://statusgator.com/services/whatsapp
+CLAUDE | https://status.claude.com/

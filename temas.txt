@@ -1,0 +1,18 @@
+# Temas de interes: uno por linea. El panel muestra las vulnerabilidades relacionadas con cada tema.
+PHP
+Linux
+Apache
+Nginx
+Java
+Exchange
+Outlook
+Zimbra
+Bind
+Samba
+Fortinet
+Cisco
+F5
+VMWARE
+Oracle
+.NET
+Synology

@@ -1,0 +1,4 @@
+# Omitir: una palabra o frase por linea.
+# Regla: si el TITULO de una noticia contiene un termino de esta lista Y ademas coincide con un tema
+# de temas.txt, la noticia se descarta. Solo se revisa el titulo, no el contenido.
+# Ejemplo: tema PHP + omitir ATTSILAN -> "ATTSILAN ... PHP" se descarta; "PHP ..." sin ATTSILAN se mantiene.

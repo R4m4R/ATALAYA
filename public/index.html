@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ATALAYA · SOC Panel · Ciberseguridad</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='10' cy='10' r='6.5' fill='%23ffffff' stroke='%232f4f6f' stroke-width='2'/%3E%3Cline x1='15' y1='15' x2='21' y2='21' stroke='%232f4f6f' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="app.css">
+</head>
+<body class="theme-profesional">
+<header>
+  <div class="brand">
+    <svg class="scan" id="scanIcon" viewBox="0 0 24 24" aria-hidden="true">
+      <g class="sweep"><path d="M12 5 L20.5 1.5 A9 9 0 0 1 20.5 8.5 Z" fill="#4a6d8c" opacity=".35"/><path d="M12 5 L3.5 1.5 A9 9 0 0 0 3.5 8.5 Z" fill="#4a6d8c" opacity=".35"/><circle cx="20.5" cy="5" r="1.1" fill="#f4c542" opacity=".7"/><circle cx="3.5" cy="5" r="1.1" fill="#f4c542" opacity=".7"/></g>
+      <rect x="9" y="3" width="6" height="4" rx="1" fill="#2f4f6f"/>
+      <path d="M12 0.4 L10.3 3 H13.7 Z" fill="#2f4f6f"/>
+      <circle cx="12" cy="5" r="1.4" fill="#f4c542"/>
+      <path d="M10 7 L8.4 20 H15.6 L14 7 Z" fill="#fff" stroke="#2f4f6f" stroke-width="1.5" stroke-linejoin="round"/>
+      <path d="M10.6 11.5 H13.4 M10.2 15.5 H13.8" stroke="#4a6d8c" stroke-width="1" opacity=".6"/>
+      <path d="M6.5 21 H17.5" stroke="#2f4f6f" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div><h1>ATALAYA : Panel de Ciberseguridad <span class="cbadge zero" id="critBadge" role="status" aria-label="Noticias criticas encontradas" title="Noticias criticas encontradas">0</span></h1><small>Alertas y vulnerabilidades · ultimas <span id="days">2</span> dias</small></div>
+  </div>
+  <div class="spacer"></div>
+  <span class="stamp"><span class="live" id="live"></span><span id="stamp">Iniciando...</span></span>
+  <button class="btn ibtn" id="btnRefresh" data-tip="Actualizar noticias y servicios" aria-label="Actualizar"><svg class="ico anim-refresh" id="refIco" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12a8 8 0 0 1-14.3 4.9" stroke="#2f80ed"/><path d="M4 12a8 8 0 0 1 14.3-4.9" stroke="#2f80ed"/><path d="M18.3 3.5v4.2h-4.2" stroke="#2f80ed"/><path d="M5.7 20.5v-4.2h4.2" stroke="#2f80ed"/></svg></button>
+  <button class="btn ibtn" id="btnEstado" type="button" data-tip="Estado ATALAYA y estadísticas" aria-label="Estado ATALAYA"><svg class="ico anim-cardio" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 12h4l2.5-7 3.5 14 2.5-7h9.5" stroke="#1faa59" pathLength="100"/></svg></button>
+  <button class="btn primary ibtn" id="btnSettings" data-tip="Ajustes del panel" aria-label="Ajustes"><svg class="ico anim-gear" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg></button>
+</header>
+
+<main>
+  <section class="kpis">
+    <div class="kpi" id="kEstado" data-kpi="estado" title="Porcentaje de salud general del sistema"><span class="kico k-estado"><svg viewBox="0 0 24 24"><path class="tn heart" d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path class="ecg" pathLength="40" d="M3.5 11.5h4l1.8-3.6 2.7 7 2-5 1.2 1.6h5.3"/></svg></span><div class="kt"><div class="n" id="kEstadoPct">-</div><div class="l">Estado sistema</div></div></div>
+    <div class="kpi" data-kpi="all" title="Quitar filtros"><span class="kico k-news"><svg viewBox="0 0 24 24"><rect class="tn" x="3" y="3" width="15" height="18" rx="2"/><path class="fold" d="M18 8h2a1 1 0 0 1 1 1v9a3 3 0 0 1-3 3"/><rect x="6.5" y="6.5" width="6" height="3.2" rx=".6" fill="currentColor" stroke="none"/><path class="ln l1" pathLength="10" d="M6.5 13h8"/><path class="ln l2" pathLength="10" d="M6.5 16h8"/><path class="ln l3" pathLength="10" d="M6.5 19h5"/></svg></span><div class="kt"><div class="n" id="kTotal">-</div><div class="l">Noticias unicas</div></div></div>
+    <div class="kpi emerg" id="kEmergTile" data-kpi="Emergencia" title="Amenazas de emergencia (CVSS 9.5+)" style="display:none"><span class="kico k-emerg">
+<!--
+<svg class="alarm-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6l-1.4 1.4M7 17l-1.4 1.4" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+-->
+
+<svg class="alarm-icon" viewBox="0 0 24 24">
+  <defs>
+    <radialGradient id="sirenGlow">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#ff7777"/>
+      <stop offset="100%" stop-color="#e00000"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Rayos de emergencia -->
+  <path d="M12 1V3M3 5L5 7M21 5L19 7M1 12H3M21 12H23"
+        stroke="#ff3030"
+        stroke-width="1.8"
+        stroke-linecap="round"/>
+
+  <!-- Carcasa -->
+  <path d="M6 17V10a6 6 0 0 1 12 0v7Z"
+        fill="#850000"
+        stroke="currentColor"
+        stroke-width="1.2"/>
+
+  <!-- Luz interior dinámica -->
+  <path class="siren-glow"
+        d="M7.5 17V10a4.5 4.5 0 0 1 9 0v7Z"
+        fill="url(#sirenGlow)"/>
+
+  <!-- Base -->
+  <path d="M4 17H20L21 20H3Z"
+        fill="currentColor"/>
+
+  <path d="M6 21H18"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"/>
+</svg>
+
+<style>
+.alarm-icon {
+  width: 32px;
+  height: 32px;
+  overflow: visible;
+}
+
+.siren-glow {
+  animation: siren-brightness 0.8s ease-in-out infinite alternate;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes siren-brightness {
+  0% {
+    opacity: 0.35;
+    filter: brightness(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    filter: brightness(1.8);
+  }
+}
+</style>
+
+
+
+</span><div class="kt"><div class="n" id="kEmerg">0</div><div class="l">Emergencia</div></div></div>
+    <div class="kpi crit" data-kpi="Critica" title="Ver solo criticas"><span class="kico k-crit"><svg viewBox="0 0 24 24"><circle class="rip" cx="12" cy="12" r="8"/><path class="tn" d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4.5M12 16h.01"/></svg></span><div class="kt"><div class="n" id="kCrit">-</div><div class="l">Criticas</div></div></div>
+    <div class="kpi grave" data-kpi="Grave" title="Ver solo graves"><span class="kico k-grave"><svg viewBox="0 0 24 24"><path class="tn" d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path class="bang" d="M12 9.5v4M12 17h.01"/></svg></span><div class="kt"><div class="n" id="kGrave">-</div><div class="l">Graves</div></div></div>
+    <div class="kpi media" data-kpi="Media" title="Ver solo medias"><span class="kico k-media"><svg viewBox="0 0 24 24"><g class="bell"><path class="tn" d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></g></svg></span><div class="kt"><div class="n" id="kMedia">-</div><div class="l">Medias</div></div></div>
+    <div class="kpi baja" data-kpi="Baja" title="Ver solo bajas"><span class="kico k-baja"><svg viewBox="0 0 24 24"><path class="tn bulb" d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6M10 22h4"/></svg></span><div class="kt"><div class="n" id="kBaja">-</div><div class="l">Bajas</div></div></div>
+    <div class="kpi info" data-kpi="Info" title="Ver solo informativas"><span class="kico k-info"><svg viewBox="0 0 24 24"><circle class="rip" cx="12" cy="12" r="8"/><circle class="tn" cx="12" cy="12" r="9.5"/><path d="M12 16v-4.5"/><path class="idot" d="M12 8h.01"/></svg></span><div class="kt"><div class="n" id="kInfo">-</div><div class="l">Informativas</div></div></div>
+    <div class="kpi sok" id="kSrcTile" data-kpi="sources" title="Ver estado de fuentes"><span class="kico k-src"><svg viewBox="0 0 24 24"><rect class="tn" x="2.5" y="3" width="19" height="7.5" rx="2"/><rect class="tn" x="2.5" y="13" width="19" height="7.5" rx="2"/><path class="led l1" d="M6.5 6.75h.01"/><path class="led l2" d="M6.5 16.75h.01"/><g class="ok-mark"><circle cx="18.5" cy="18.5" r="5" fill="#fff"/><path class="chk" pathLength="10" d="M16.1 18.6l1.7 1.7 3-3.3"/></g><g class="bad-mark"><circle cx="18.5" cy="18.5" r="5" fill="#fff"/><path d="M18.5 15.9v2.6M18.5 20.9h.01"/></g></svg></span><div class="kt"><div class="n" id="kSrc">-</div><div class="l">Fuentes OK</div></div></div>
+  </section>
+
+  <section class="panel">
+    <h2 style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+      <button class="monhead" id="btnMon" type="button" title="Minimizar / maximizar">
+        <svg class="monchev" id="monChev" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Monitor de salud de servicios</span>
+      </button>
+      <span style="display:flex;gap:8px;align-items:center"><button class="btn" id="btnHealth" style="padding:4px 10px;font-size:12px">Comprobar ahora</button></span>
+    </h2>
+    <div id="healthBody"><div class="loading">Comprobando servicios...</div></div>
+  </section>
+
+  <section class="grid2">
+    <div class="panel">
+      <h2><span id="feedTitle">Feed de amenazas</span> <span class="cbadge sm zero" id="feedCount" title="Alertas encontradas">0</span></h2>
+      <div style="position:relative">
+        <div class="sbar">
+          <span class="sicon" id="sIcon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></span>
+          <input id="gQ" type="search" placeholder="Buscar una palabra en el periodo (ej. VMWARE)" autocomplete="off">
+          <button class="btn" id="btnClear" type="button">Limpiar búsqueda</button>
+          <button class="btn" id="btnFiltros" type="button">Filtros</button>
+        </div>
+        <div class="filters-dropdown" id="filtersDropdown">
+          <select id="fSrc" title="Fuente"><option value="">Todas las fuentes</option></select>
+          <select id="fTopic" title="Tema"><option value="">Todos los temas</option></select>
+          <select id="fSev" title="Severidad">
+            <option value="">Todas las severidades</option>
+            <option value="Critica">Crítica</option><option value="Grave">Grave</option><option value="Media">Media</option><option value="Baja">Baja</option><option value="Info">Info</option>
+          </select>
+        </div>
+      </div>
+      <span id="togs" class="togs" style="display:none" title="Niveles a buscar. Los desactivados se descartan"></span>
+      <div class="active-filter" id="activeFilter"></div>
+      <div id="feed"><div class="loading">Cargando...</div></div>
+    </div>
+
+    <div style="display:grid;gap:16px;align-content:start">
+      <div class="panel">
+        <h2><span class="ptab" data-tab="ultimas">Últimas noticias</span><span class="ptab" data-tab="temas">Temas monitorizados</span></h2>
+        <div id="topics"><div class="loading">-</div></div>
+      </div>
+      <div class="panel">
+        <h2>Estado de fuentes</h2>
+        <table><thead><tr><th>Fuente</th><th>Estado</th><th>Items</th></tr></thead>
+        <tbody id="sources"></tbody></table>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>Configuracion en config.txt · Fuentes en fuentes.txt · Temas en temas.txt · Duplicados fusionados automaticamente</footer>
+
+<!-- Modal de ajustes -->
+<div class="overlay" id="overlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+    <header><h1 id="mTitle">Ajustes del panel</h1><div class="spacer"></div>
+      <button class="btn" id="mClose">Cerrar</button></header>
+    <div class="tabs">
+      <button class="tab on" data-tab="config">Busqueda</button>
+      <button class="tab" data-tab="fuentes">Fuentes</button>
+      <button class="tab" data-tab="temas">Temas</button>
+      <button class="tab" data-tab="omitir">Omitir</button>
+      <button class="tab" data-tab="servicios">Servicios</button>
+      <button class="tab" data-tab="notificaciones">Notificaciones</button>
+    </div>
+    <div class="mbody" id="tab-config">
+      <label class="row" style="gap:8px;font-weight:600;cursor:pointer">
+        <input type="checkbox" id="mMonitor"> General: activar el monitor de salud de servicios (Outlook, Teams, Gmail, WhatsApp...)
+      </label>
+      <label class="fl">Niveles de severidad a buscar</label>
+      <div class="row" id="mSevs"></div>
+      <div class="row">
+        <div><label class="fl">Ventana (dias)</label><br><input type="number" id="mDias" min="1" max="30" style="width:110px"></div>
+        <div><label class="fl">Actualizar noticias cada (minutos)</label><br><input type="number" id="mCache" min="1" max="1440" style="width:150px"></div>
+      </div>
+      <div class="row">
+        <div><label class="fl">Tema visual</label><br><select id="mTema" style="width:240px"><option value="profesional">Profesional (azul corporativo)</option><option value="corporativo">Corporativo (sobrio, tonos calidos)</option></select></div>
+        <div><label class="fl">Panel derecho por defecto</label><br><select id="mPanel" style="width:240px"><option value="ultimas">Últimas noticias</option><option value="temas">Temas monitorizados</option></select></div>
+        <div><label class="fl">Noticias en el TOP de ultimas noticias (1-50)</label><br><input type="number" id="mTop" min="1" max="50" style="width:120px"></div>
+        <div><label class="fl">Umbral CVSS Emergencia (1.0-10.0)</label><br><input type="number" id="mEmergCVSS" min="1.0" max="10.0" step="0.1" style="width:120px"></div>
+        <div><label class="fl">Monitor de salud al abrir</label><br><select id="mMonVista" style="width:240px"><option value="max">Maximizado</option><option value="min">Minimizado</option></select></div>
+      </div>
+      <div class="row">
+        <div><label class="fl">Comprobar salud de servicios cada (segundos, 30-3600)</label><br>
+          <input type="number" id="mIntervalo" min="30" max="3600" style="width:150px"></div>
+      </div>
+      <div class="row">
+        <div><label class="fl">Tamano de letra (px, 11-20)</label><br>
+          <input type="number" id="mFont" min="11" max="20" style="width:110px" oninput="applyFont(this.value)"></div>
+      </div>
+      <div class="row">
+        <div><label class="fl">Umbral de salud verde (%, OK si &ge;)</label><br><input type="number" id="mUmbV" min="1" max="100" style="width:170px"></div>
+        <div><label class="fl">Umbral de salud ambar (%, rojo si es menor)</label><br><input type="number" id="mUmbA" min="1" max="100" style="width:170px"></div>
+      </div>
+      <div class="row">
+                <div><label class="fl">Caracteres del resumen de cada noticia (100-5000)</label><br><input type="number" id="mResumen" min="100" max="5000" style="width:240px"></div>
+        <div><label class="fl">Tamano de letra de los monitores (px, 9-16)</label><br><input type="number" id="mTamMon" min="9" max="16" style="width:200px"></div>
+        <div><label class="fl">Horas de la grafica principal (1-168)</label><br><input type="number" id="mHGen" min="1" max="168" style="width:200px"></div>
+        <div><label class="fl">Horas de cada grafica de servicio (1-24)</label><br><input type="number" id="mHSvc" min="1" max="24" style="width:200px"></div>
+        <div><label class="fl">Minutos que se muestra el aviso de incidencia (1-1440)</label><br><input type="number" id="mMinInc" min="1" max="1440" style="width:200px"></div>
+      </div>
+      <div class="row">
+        <div><label class="fl">Ancho de la web (% de la pantalla, 50-100)</label><br><input type="number" id="mWpct" min="50" max="100" style="width:170px"></div>
+        <div><label class="fl">Casillas de monitorizacion por fila (1-12)</label><br><input type="number" id="mCols" min="1" max="12" style="width:170px"></div>
+      </div>
+      <div class="row" style="flex-direction:column;align-items:stretch">
+        <label class="fl">Webhook de aviso (Teams o Slack): recibe un mensaje al caer o recuperarse un servicio</label>
+        <input type="text" id="mHook" placeholder="https://..." style="width:100%">
+        <label class="fl">Mantenimiento (sin avisos): [Lun,Mie ]HH:MM-HH:MM separadas por ;</label>
+        <input type="text" id="mMant" placeholder="Sab 02:00-04:00;23:00-23:30" style="width:100%">
+      </div>
+      <div class="hint">Los niveles que no marques se descartan al buscar, lo que acelera el proceso y reduce ruido.</div>
+    </div>
+    <div class="mbody hidden" id="tab-fuentes">
+      <label class="fl">Una fuente por linea: Nombre | URL  (las lineas con # se ignoran)</label>
+      <textarea id="tFuentes" spellcheck="false"></textarea>
+      <div class="hint">Acepta paginas HTML y feeds RSS/Atom. Los cambios se aplican en la siguiente busqueda.</div>
+    </div>
+    <div class="mbody hidden" id="tab-temas">
+      <label class="fl">Un tema por linea (ej. PHP, Windows, Fortinet)</label>
+      <textarea id="tTemas" spellcheck="false"></textarea>
+      <div class="hint">Cada tema muestra las vulnerabilidades que lo mencionan en el titulo.</div>
+    </div>
+    <div class="mbody hidden" id="tab-omitir">
+      <label class="fl">Terminos a omitir, uno por linea</label>
+      <textarea id="tOmitir" spellcheck="false" style="min-height:200px"></textarea>
+      <div class="hint"><b>Regla:</b> si el <b>titulo</b> de una noticia contiene un termino de esta lista <b>y</b> coincide con un tema, la noticia se descarta. Ejemplo: tema <i>PHP</i> + omitir <i>ATTSILAN</i> &rarr; "ATTSILAN ... PHP" se descarta. El contenido de la noticia no se revisa.</div>
+    </div>
+    <div class="mbody hidden" id="tab-servicios">
+      <label class="fl">Servicios a monitorizar, una por linea: Nombre | URL</label>
+      <textarea id="tServicios" spellcheck="false" style="min-height:220px"></textarea>
+      <div class="hint"><b>Formato:</b> <code>Nombre | URL</code>. Para omitir un servicio del analisis y de la web, pon <code>#</code> al principio de su linea. Quita el <code>#</code> para volver a analizarlo.</div>
+      <div class="hint"><b>Formatos (columna derecha):</b><br>
+        &bull; <code>https://web.ejemplo.com</code> &rarr; HTTP (codigo y latencia)<br>
+        &bull; <code>192.168.1.10:5666</code> o <code>tcp://servidor:443</code> &rarr; TCP, comprueba que el puerto acepta conexiones (tipo Nagios)<br>
+        &bull; <code>ping://10.0.0.1</code> o solo <code>10.0.0.1</code> &rarr; ICMP (ping)<br>
+        Requiere que el monitor este activado: casilla <b>General</b> en Busqueda.</div>
+    </div>
+    <div class="mbody hidden" id="tab-notificaciones">
+      <label class="row" style="gap:8px;font-weight:600;cursor:pointer">
+        <input type="checkbox" id="mNotifHab"> Activar notificaciones por correo electronico
+      </label>
+      <div class="row">
+        <div><label class="fl">Tipo de servidor</label><br>
+          <select id="mNotifTipo" style="width:240px">
+            <option value="">-- Desactivado --</option>
+            <option value="gmail">Gmail</option>
+            <option value="outlook">Outlook</option>
+            <option value="smtp">SMTP generico (Zimbra, Postfix, etc.)</option>
+          </select></div>
+        <div><label class="fl">Asunto del email</label><br><input type="text" id="mNotifAsunto" placeholder="ATALAYA: Alerta de seguridad" style="width:100%"></div>
+      </div>
+      <div class="row" style="flex-direction:column">
+        <label class="fl">Destinatario (email)</label>
+        <input type="email" id="mNotifDestino" placeholder="tu_email@ejemplo.com" style="width:100%">
+      </div>
+      <fieldset id="gmailFields" style="display:none;margin-top:10px;padding:10px;border:1px solid #ddd;border-radius:4px">
+        <legend>Credenciales de Gmail</legend>
+        <div class="row">
+          <div><label class="fl">Usuario (tu email Gmail)</label><br><input type="email" id="mGmailUser" placeholder="tu_email@gmail.com" style="width:100%"></div>
+          <div><label class="fl">Contrasena (o app-password)</label><br><input type="password" id="mGmailPass" placeholder="Contrasena o app-password" style="width:100%"></div>
+        </div>
+        <div class="hint">Para Gmail: usa una <a href="https://support.google.com/accounts/answer/185833" target="_blank">contrasena de aplicacion</a> en lugar de tu contrasena normal.</div>
+      </fieldset>
+      <fieldset id="outlookFields" style="display:none;margin-top:10px;padding:10px;border:1px solid #ddd;border-radius:4px">
+        <legend>Credenciales de Outlook</legend>
+        <div class="row">
+          <div><label class="fl">Usuario (tu email Outlook)</label><br><input type="email" id="mOutlookUser" placeholder="tu_email@outlook.com" style="width:100%"></div>
+          <div><label class="fl">Contrasena</label><br><input type="password" id="mOutlookPass" placeholder="Contrasena" style="width:100%"></div>
+        </div>
+      </fieldset>
+      <fieldset id="smtpFields" style="display:none;margin-top:10px;padding:10px;border:1px solid #ddd;border-radius:4px">
+        <legend>Configuracion de servidor SMTP</legend>
+        <div class="row">
+          <div><label class="fl">Servidor SMTP</label><br><input type="text" id="mSmtpSrv" placeholder="mail.ejemplo.com" style="width:100%"></div>
+          <div><label class="fl">Puerto</label><br><input type="number" id="mSmtpPue" min="1" max="65535" value="587" style="width:120px"></div>
+          <div><label class="fl">Usar SSL/TLS</label><br><select id="mSmtpSsl" style="width:120px"><option value="1" selected>Si</option><option value="0">No</option></select></div>
+        </div>
+        <div class="row">
+          <div><label class="fl">Usuario (opcional)</label><br><input type="text" id="mSmtpUser" placeholder="usuario (opcional)" style="width:100%"></div>
+          <div><label class="fl">Contrasena (opcional)</label><br><input type="password" id="mSmtpPass" placeholder="Contrasena (opcional)" style="width:100%"></div>
+        </div>
+        <div class="row">
+          <div><label class="fl">Email remitente</label><br><input type="email" id="mSmtpRemit" placeholder="remitente@ejemplo.com" style="width:100%"></div>
+        </div>
+      </fieldset>
+      <div class="hint" style="margin-top:20px"><b>Nota:</b> Si la notificacion falla, el programa continuara sin interrupciones. Los errores se registran en notificaciones_error.log. Las credenciales se guardan en config.txt (se recomienda usar contrasenas de aplicacion en lugar de contrasenas normales).</div>
+    </div>
+    <div class="mfoot">
+      <span class="msg" id="mMsg"></span>
+      <button class="btn" id="mCancel">Cancelar</button>
+      <button class="btn primary" id="mSave">Guardar y buscar</button>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="detailOverlay">
+  <div class="modal detail-box" role="dialog" aria-modal="true" aria-labelledby="dTitle">
+    <header><h1 id="dTitle">Detalle</h1><div class="spacer"></div><button class="btn" id="dClose">Cerrar</button></header>
+    <div class="dbody" id="dBody"></div>
+  </div>
+</div>
+<div class="overlay" id="alertOverlay">
+  <div class="modal alert-box" role="alertdialog" aria-modal="true" aria-labelledby="alertTitle">
+    <header><h1 id="alertTitle">Avisos</h1></header>
+    <ul id="alertBody"></ul>
+    <div class="mfoot"><button class="btn primary" id="alertClose">Entendido</button></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
