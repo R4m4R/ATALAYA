@@ -27,3 +27,6 @@ Third-Party Service Monitoring: Continuously tracks the availability and perform
 RSS & Feed Health Monitoring: Proactively checks the integrity and operational status of RSS channels and warning feed endpoints, ensuring an uninterrupted flow of threat intelligence.
 
 Heartbeat & Status Tracking: Implements robust heartbeat mechanisms to verify that collection agents and monitored services remain fully active and operational without disruptions.
+
+
+<img width="1874" height="813" alt="image" src="https://github.com/user-attachments/assets/c774e650-e481-409a-9117-b22dcb8b7050" />
