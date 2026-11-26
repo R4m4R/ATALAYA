@@ -1,5 +1,5 @@
 
-IMPORTANTE: EL SISTEMA DE NOTIFICACIONES POR CORREO ESTA INHABILITADO YA QUE NO FUNCIONA !!!!  SE REVISARA EN PROXIMAS VERSIONES
+<B>IMPORTANTE: EL SISTEMA DE NOTIFICACIONES POR CORREO ESTA INHABILITADO YA QUE NO FUNCIONA !!!!  SE REVISARA EN PROXIMAS VERSIONES</B>
 
 ATALAYA: Sistema Integral de Inteligencia de Amenazas y Monitorización Continua
 ATALAYA es una plataforma avanzada de ciberseguridad diseñada para centralizar, filtrar y supervisar en tiempo real múltiples fuentes de información sobre amenazas y la disponibilidad de servicios críticos. Concebida como un centro de operaciones unificado, la plataforma reduce drásticamente el tiempo de respuesta ante incidentes mediante la automatización de la recolección de avisos y el control de estado de infraestructura.
