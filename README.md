@@ -30,3 +30,5 @@ Heartbeat & Status Tracking: Implements robust heartbeat mechanisms to verify th
 
 
 <img width="1874" height="813" alt="image" src="https://github.com/user-attachments/assets/c774e650-e481-409a-9117-b22dcb8b7050" />
+
+<img width="1338" height="558" alt="image" src="https://github.com/user-attachments/assets/ca80802e-1aae-4c9a-9b4e-9547527d06ef" />
